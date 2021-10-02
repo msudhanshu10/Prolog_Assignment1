@@ -1,6 +1,6 @@
 /*
-NAME: 
-ID: 
+NAME: Sudhanshu Mishra
+ID: 2019B1A70750P
 */
 
 age(rohan, 23).
