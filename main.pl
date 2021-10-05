@@ -42,8 +42,7 @@ qualified(X, houseOfRepresentatives) :- houseOfRepresentatives(X).
 
 %Section 8
 power(congress, "To borrow Money on the credit of the United States").
-power(congress, "To regulate Commerce with foreign Nations, and among 
-the several States, and with the Indian Tribes").
+power(congress, "To regulate Commerce with foreign Nations, and among the several States, and with the Indian Tribes").
 power(congress, "To establish an uniform Rule of Naturalization, and uniform Laws on the subject of Bankruptcies throughout the United States").
 power(congress, "To coin Money, regulate the Value thereof, and of foreign Coin, and fix the Standard of Weights and Measures").
 power(congress, "To provide for the Punishment of counterfeiting the Securities and current Coin of the United States").
