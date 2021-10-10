@@ -3,6 +3,8 @@ NAME: Satyam Srivastava
 ID: 2019B1A70188P
 NAME: Sudhanshu Mishra
 ID: 2019B1A70750P
+NAME: Uday Mittal
+ID: 2019B4A70662P
 */
 
 age(rohan, 23).
