@@ -34,6 +34,7 @@ monday(2, 12, 2019).
 
 % ARTICLE 1
 % Section 1
+congressOfUS(senate, houseOfRepresentatives).
 
 %Section 2
 houseOfRepresentatives(X) :- age(X,Y), Y>=20,
