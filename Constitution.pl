@@ -3,8 +3,8 @@ amendmentXV("Passed on February 26, 1869").
 amendmentXV("Ratified on Februry 3, 1870").
 
 %Section 1.
-rightToVote(citizen(X, Z), "Cannot Be Denied or abriged by the United States or by any State on account of race, color, or previous condition of servitude") :- Z >= 18.
-%Format of citizen(X, Z) is X is name and Z is the age of the citizen.
+rightToVote(X, "Cannot Be Denied or abriged by the United States or by any State on account of race, color, or previous condition of servitude") :- age(X, Y), Y >= 18.
+
 
 %Section 2.
 power(congress, "To Enforce this article by appropriate legislation").
@@ -52,7 +52,7 @@ operative(XVIII, "State should ratify the amendment within seven years from the 
 %Amendment XIX.
 amendmentXIX("Passed on June 4, 1919").
 amendmentXIX("Ratified on August 18, 1920").
-rightToVote(citizen(X, Z), "Cannot be denied or abriged by the United States or by any State on account of sex") :- Z >= 18.
+rightToVote(X, "Cannot be denied or abriged by the United States or by any State on account of sex") :- age(X, Y), Y >= 18.
 %Defines the condition under which a citizen is given a right to vote and cannot be denied the right To Vote.
 power(congress, "Enforce Amendment XIX by appropriate legislation").
 
@@ -130,7 +130,7 @@ amendmentXXIV("Passed on August 27, 1962").
 amendmentXXIV("Ratified on January 13, 1964").
 
 %Section 1.
-rightToVote(citizen(X, Z), "Vote in Primary or other election for President or Vice President, for electors of President or Vice President, or for Senator or Representative in congress cannot be denied by any reason of failure to pay poll tax or other tax") :- Z >= 18.
+rightToVote(X, "Vote in Primary or other election for President or Vice President, for electors of President or Vice President, or for Senator or Representative in congress cannot be denied by any reason of failure to pay poll tax or other tax") :- age(X, Y), Y >= 18.
 
 %Section 2.
 power(congress, "Enforce this article by appropriate legislation").
@@ -160,7 +160,7 @@ amendmentXXVI("Ratified on July 1, 1971").
 modified(XXVI, "Amendment XIV, Section 2").
 
 %Section 1.
-rightToVote(citizen(X, Z), "Cannot be Prohibited under any account of age") :- Z >= 18.
+rightToVote(X, "Cannot be Prohibited under any account of age") :- age(X, Y), Y >= 18.
 
 %Section 2.
 power(congress, "Enforce this article by appropriate legislation").
