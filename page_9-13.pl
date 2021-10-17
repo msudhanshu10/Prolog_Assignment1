@@ -19,11 +19,11 @@ deputy(south_carolina, j_rutledge, charles_cotesworth_pinckney, charles_pinckney
 deputy(georgia, william_few, abr_baldwin).
 
 % Amendment I
-amendmentI(congress, "shall make no law respecting an establishment of
+power(congress, "shall make no law respecting an establishment of
 religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press, or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.").
 
 % Amendment II
-amendmenII("A well regulated Militia, being necessary to the security of a free State").
+amendmentII("A well regulated Militia, being necessary to the security of a free State").
 
 % Amendment III
 amendmentIII("No Soldier shall, in time of peace be quartered in any house, without the consent of the Owner, nor in time of war, but in a manner to be prescribed by law.").
@@ -33,11 +33,11 @@ right(Citizen, "shall not be infringed to keep and bear Arms").
 right(Citizen, "The right to be secure in their persons, houses, papers, and effects, against unreasonable searches and seizures, shall not be violated, and no Warrants shall issue, but upon probable cause, supported by Oath or affirmation, and particularly describing the place to be searched, and the persons or things to be seized.").
 
 % Amendment V
-amendmentV(person, "shall not be held to answer for a capital, or otherwise infamous crime, unless on a presentment or indictment of a Grand Jury, except in cases arising in the land or naval forces, or in the Militia, when in actual service in time of War or public danger").
-amendmentV(person, "shall not be subject for the same offence to be twice put in jeopardy of life or limb").
-amendmentV(person, "shall not be compelled in any criminal case to be a witness
+right(Citizen, "shall not be held to answer for a capital, or otherwise infamous crime, unless on a presentment or indictment of a Grand Jury, except in cases arising in the land or naval forces, or in the Militia, when in actual service in time of War or public danger").
+right(Citizen, "shall not be subject for the same offence to be twice put in jeopardy of life or limb").
+right(Citizen, "shall not be compelled in any criminal case to be a witness
 against himself").
-amendmentV(person, "shall not be deprived of life, liberty, or property,
+right(Citizen, "shall not be deprived of life, liberty, or property,
 without due process of law", "private property shall not be taken for public use, without just compensation.").
 
 % Amendment VI
@@ -81,7 +81,7 @@ amendmentXIII("Ratified on December 6, 1865").
 amendmentXIII_section1(slavery, involuntary_servitude, "shall not exist within the United States, or any place subject to their jurisdiction, except as a punishment for crime whereof the party shall have been duly convicted ").
 
 % Amendment XIII Section 2
-amendmentXIII_section2(congress, "shall have power to enforce this article by
+power(congress, "shall have power to enforce this article by
 appropriate legislation.").
 
 % Amendment XIV
@@ -89,18 +89,16 @@ amendmentXIV("Passed on June 13, 1866").
 amendmentXIV("Ratified on July 9, 1868").
 
 % Amendment XIV Section 1
-amendmentXIV_section1(person, "born or naturalized in the United States and
-subject to the jurisdiction thereof, are citizens of the United
-States and of the State wherein they reside").
-amendmentXIV_section1(state, "shall not make or enforce any law which shall abridge the privileges or immunities of citizens of the United States", "nor shall any State deprive any person of life, liberty, or property, without due process of law", "nor deny to any person within its jurisdiction the equal protection of the laws.").
+right(Citizen, "born or naturalized in the United States and subject to the jurisdiction thereof, are citizens of the United States and of the State wherein they reside").
+power(state, "shall not make or enforce any law which shall abridge the privileges or immunities of citizens of the United States", "nor shall any State deprive any person of life, liberty, or property, without due process of law", "nor deny to any person within its jurisdiction the equal protection of the laws.").
 
 % Amendment XIV Section 2
 amendmentXIV_section2(representatives, "shall be apportioned among the several States according to their respective numbers, counting the whole number of persons in each State, excluding Indians not taxed.").
 
-deniedToVote(citizen(X, Y), X +"is denied to any of the male inhabitants of such State, and citizens of the United States, or in any way abridged, except for participation in rebellion, or other crime, the basis of representation therein shall be reduced in the proportion which the number of such male citizens shall bear to the whole number of male citizens twenty-one years of age in such State.") :-  Y>=21.
+deniedToVote(X, X +"is denied to any of the male inhabitants of such State, and citizens of the United States, or in any way abridged, except for participation in rebellion, or other crime, the basis of representation therein shall be reduced in the proportion which the number of such male citizens shall bear to the whole number of male citizens twenty-one years of age in such State.") :-  age(X, Y), Y>=21.
 
 % Amendment XIV Section 3
-amendmentXIV_section3(person, "shall not be a Senator or Representative in Congress, or elector of President and Vice President, or hold any offi ce, civil or military, under the United States, or under any State, who, having previously taken an oath, as a member of Congress, or as an offi cer of the United States, or as a member of any State legislature, or as an executive or judicial offi cer of any State, to support the Constitution of the United States, shall have engaged in insurrection or rebellion against the same, or given aid or comfort to the enemies thereof.").
+amendmentXIV_section3(person, "shall not be a Senator or Representative in Congress, or elector of President and Vice President, or hold any office, civil or military, under the United States, or under any State, who, having previously taken an oath, as a member of Congress, or as an offi cer of the United States, or as a member of any State legislature, or as an executive or judicial offi cer of any State, to support the Constitution of the United States, shall have engaged in insurrection or rebellion against the same, or given aid or comfort to the enemies thereof.").
 
 % Amendment XIV Section 4
 amendmentXIV_section4("The validity of the public debt of the United States, authorized by law, including debts incurred for payment of pensions and bounties for services in suppressing insurrection or rebellion, shall not be questioned").
@@ -109,6 +107,6 @@ or obligation incurred in aid of insurrection or rebellion
 against the United States, or any claim for the loss or emancipation of any slave ; but all such debts, obligations and claims shall be held illegal and void.").
 
 % Amendment XIV Section 5
-amendmentXIV_section5(congress, "shall have the power to enforce, by appropriate legislation, the provisions of this article").
+power(congress, "shall have the power to enforce, by appropriate legislation, the provisions of this article").
 
 
