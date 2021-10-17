@@ -47,11 +47,13 @@ newLaw(XVIII, "State and Centre enjoy concurrent powers").
 
 %Section 3.
 operative(XVIII, "State should ratify the amendment within seven years from the ratified date of Congress").
+%Defines the condition when the amendment would become operative.
 
 %Amendment XIX.
 amendmentXIX("Passed on June 4, 1919").
 amendmentXIX("Ratified on August 18, 1920").
 rightToVote(citizen(X, Z), "Cannot be denied or abriged by the United States or by any State on account of sex") :- Z >= 18.
+%Defines the condition under which a citizen is given a right to vote and cannot be denied the right To Vote.
 power(congress, "Enforce Amendment XIX by appropriate legislation").
 
 %Amendment XX.
@@ -65,6 +67,7 @@ termSuspensionPresident("Noon on 20th day of January").
 termSuspensionVicePresident("Noon on 20th day of January").
 termSuspensionSenator("Noon on 3rd day of January").
 termSuspensionRepresentatives("Noon on 3rd day of January").
+%Defines the time at which the the post is transfered to the new President, Vice President, Senators and the Representatives.
 
 %Section 2.
 meetingOfCongress(NoOfMeeting, Date, Month, Year) :- NoOfMeeting >= 1, month(3, 1, Year).
@@ -73,6 +76,7 @@ meetingOfCongress(NoOfMeeting, Date, Month, Year) :- NoOfMeeting >= 1, month(3, 
 emergency(dies(20, 1, Year), "Vice President becomes the President").
 emergency(dies(date, month, Year), "Vice President becomes President until new President is elected") :- date < 20, month >= 1.
 power(congress, "If Vice President and President are not qualified then Congress shall appoint someone to act as the President and other to act as the Vice President").
+%Defines various conditions of emergency and the way to deal with it.
 
 %Section 4.
 power(congress, "House of Representatives can be given the power to choose the President").
@@ -104,7 +108,8 @@ amendmentXXII("Ratified on February 27, 1951").
 
 %Section 1.
 maxTermPresident(X) :- X = 2.
-minTermCountedPresident(X) :- X = 2.
+minYearCountedPresident(X) :- X = 2.
+%Defines the maximum number of terms a President can serve and the minimum number of years which is counted as a term.
 
 %Section 2.
 operative(XXII, "Until ratified by the states with a three-fourth majority within seven years of date of submission of congress.").
@@ -138,7 +143,8 @@ amendmentXXV("Ratified on February 10, 1967").
 emergency("Removal or death or resignation of President makes Vice President President").
 
 %Section 2.
-vacancy(vicePresident, "President may appoint a Vice President by a majority vote in the Congress").
+vacancy(vp, "President may appoint a Vice President by a majority vote in the Congress").
+%Actions taken by the President if the office of vice_president is vacant.
 
 %Section 3.
 power(vp, "Whenever President transfers his duties to an acting President from senate, and the Speaker of the House of Representatives writes a declaration mentioning immaturity of the President in exercising the duties, until the speaker gets a contrary, Vice President becomes the Acting President").
