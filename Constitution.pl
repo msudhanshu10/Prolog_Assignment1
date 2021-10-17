@@ -14,6 +14,8 @@ amendmentXVI("Passed on July 2, 1909").
 amendmentXVI("Ratified on February 3, 1913").
 modified("Amendment XVI", "Article 1, Section 9").
 
+power(congress, "Lay and collect tax on income, from whatever sources derived, without apportionment among several states, and without regard to any census or enumeration").
+
 %Not available in Knowledge Base.
 %Has to be added first.
 
@@ -157,7 +159,3 @@ power(congress, "Enforce this article by appropriate legislation").
 %Amendment XXVII.
 amendmentXXVII("Proposed on September 25, 1789").
 amendmentXXVII("Ratified on May 7, 1992").
-
-
-
-
