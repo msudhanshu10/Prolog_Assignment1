@@ -1,10 +1,10 @@
-citizen(_, _).
 %Amendment XV.
 amendmentXV("Passed on February 26, 1869").
 amendmentXV("Ratified on Februry 3, 1870").
 
 %Section 1.
 rightToVote(citizen(X, Z), "Cannot Be Denied or abriged by the United States or by any State on account of race, color, or previous condition of servitude") :- Z >= 18.
+%Format of citizen(X, Z) is X is name and Z is the age of the citizen.
 
 %Section 2.
 power(congress, "To Enforce this article by appropriate legislation").
@@ -12,19 +12,18 @@ power(congress, "To Enforce this article by appropriate legislation").
 %Amendment XVI.
 amendmentXVI("Passed on July 2, 1909").
 amendmentXVI("Ratified on February 3, 1913").
-modified("Amendment XVI", "Article 1, Section 9").
+modified(XVI, "Article 1, Section 9").
+%Format of modified(X, Z) is X is the Amendment and Z is the article or the amendment amended by the US Congress.
 
 power(congress, "Lay and collect tax on income, from whatever sources derived, without apportionment among several states, and without regard to any census or enumeration").
-
-%Not available in Knowledge Base.
-%Has to be added first.
 
 %Amendment XVII.
 amendmentXVII("Passed on May 13, 1912").
 amendmentXVII("Ratified on April 8, 1913").
-modified("Amendment XVII", "Article 1, Section 3").
+modified(XVII, "Article 1, Section 3").
 
 senatorsFromState(X) :- X = 2.
+%Defines the maximum number of senators from a particular state of the United States.
 qualificationsOfElectors("Decided by State Legislature").
 vacancies(senator, "Issue Writs and a temporary allocation is done by the executive and the elections are conducted").
 amendmentXVII("Does not affect elections or term of senate").
@@ -32,18 +31,22 @@ amendmentXVII("Does not affect elections or term of senate").
 %Amendment XVIII.
 amendmentXVIII("Passed on December 18, 1917").
 amendmentXVIII("Ratified on January 16, 1919").
-repealed("Amendment XXI", "Amendment XVIII").
+repealed(XXI, "Amendment XVIII").
+%Format of repealed(X, Z) is X is the amendment which is repealed and Z is the US Congress amendment which repeals X.
 
 %Section 1.
-implementationAmendmentXVIII("After One Year").
-affect("Sale, Manufature, Import and Export of Intoxicating Liquors").
-newLaw("All Jurisdictions Prohibited").
+implementation(XVIII, "After One Year").
+%Defines the time after which a particular amendment is implemented
+affect(XVIII, "Sale, Manufature, Import and Export of Intoxicating Liquors").
+newLaw(XVIII, "All Jurisdictions Prohibited").
+%affect defines the areas which gets influenced by the particular amendment.
+%newLaw defines the new law made by the US Congress.
 
 %Section 2.
-newLaw("State and Centre enjoy concurrent powers").
+newLaw(XVIII, "State and Centre enjoy concurrent powers").
 
 %Section 3.
-operative("State should ratify the amendment within seven years from the ratified date of Congress").
+operative(XVIII, "State should ratify the amendment within seven years from the ratified date of Congress").
 
 %Amendment XIX.
 amendmentXIX("Passed on June 4, 1919").
@@ -54,8 +57,8 @@ power(congress, "Enforce Amendment XIX by appropriate legislation").
 %Amendment XX.
 amendmentXX("Passed on March 2, 1932").
 amendmentXX("Ratified on January 23, 1933").
-modified("Amendment XX", "Article 1, Section 4 by Section 2").
-modified("Amendment XX", "Amendment XII suspended by Section 3").
+modified(XX, "Article 1, Section 4 by Section 2").
+modified(XX, "Amendment XII suspended by Section 3").
 
 %Section 1.
 termSuspensionPresident("Noon on 20th day of January").
@@ -76,24 +79,24 @@ power(congress, "House of Representatives can be given the power to choose the P
 power(congress, "House of Senate can be given the power to choose the Vice President").
 
 %Section 5.
-implementation("Section 1 and 2 shall take effect on the 15th day of October").
+implementation(XX, "Section 1 and 2 shall take effect on the 15th day of October").
 
 %Section 6.
-implementation("Amendment XX can be implemented only when three fourth majority of the state ratifies it within seven years of date of submission").
+implementation(XX, "Amendment XX can be implemented only when three fourth majority of the state ratifies it within seven years of date of submission").
 
 %Amendment XXI.
 amendmentXXI("Passed on February 20, 1933").
 amendmentXXI("Ratified on December 5, 1933").
 
 %Section 1.
-repeal("Amendment XXI", "Amendment XVIII").
+repeal(XXI, "Amendment XVIII").
 
 %Section 2.
-affect("Transportation or importation of intoxicating liquor into any state, Territory or possession of United States").
-newLaw("All such acts, violating law, are prohibited").
+affect(XXI, "Transportation or importation of intoxicating liquor into any state, Territory or possession of United States").
+newLaw(XXI, "All such acts, violating law, are prohibited").
 
 %Section 3.
-operative("States of United States ratify the laws within seven years from the date of ratification by the US Congress").
+operative(XXI, "States of United States ratify the laws within seven years from the date of ratification by the US Congress").
 
 %Amendment XXII.
 amendmentXXII("Passed on March 21, 1947").
@@ -104,7 +107,7 @@ maxTermPresident(X) :- X = 2.
 minTermCountedPresident(X) :- X = 2.
 
 %Section 2.
-operative("Until ratified by the states with a three-fourth majority within seven years of date of submission of congress.").
+operative(XXII, "Until ratified by the states with a three-fourth majority within seven years of date of submission of congress.").
 
 %Amendment XXIII.
 amendmentXXIII("Passed on June 16, 1960").
@@ -148,7 +151,7 @@ power(congress, "In case of dissatisfaction Congress shall meet in forty eight h
 %Amendment XXVI.
 amendmentXXVI("Passed on March 23, 1971").
 amendmentXXVI("Ratified on July 1, 1971").
-modified("Amendment XXVI, Section 1", "Amendment XIV, Section 2").
+modified(XXVI, "Amendment XIV, Section 2").
 
 %Section 1.
 rightToVote(citizen(X, Z), "Cannot be Prohibited under any account of age") :- Z >= 18.
@@ -159,3 +162,4 @@ power(congress, "Enforce this article by appropriate legislation").
 %Amendment XXVII.
 amendmentXXVII("Proposed on September 25, 1789").
 amendmentXXVII("Ratified on May 7, 1992").
+newLaw(XXVII, "No law, varying the compensation for the services of the Senators and Representatives, shall take effect, until an electionn of representatives shall have intervened").
