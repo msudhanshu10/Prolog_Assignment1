@@ -70,7 +70,7 @@ termSuspensionRepresentatives("Noon on 3rd day of January").
 %Defines the time at which the the post is transfered to the new President, Vice President, Senators and the Representatives.
 
 %Section 2.
-meetingOfCongress(NoOfMeeting, Date, Month, Year) :- NoOfMeeting >= 1, month(3, 1, Year).
+noOfMeeting(num) :- num >= 1.
 
 %Section 3
 emergency(dies(20, 1, Year), "Vice President becomes the President").
